@@ -1,16 +1,14 @@
-#### This project is very similar to
+### This project is very similar to
 
-#####  See [Vertx doc](https://vertx.io/blog/some-rest-with-vert-x/) .
+#####  See [Vertx doc](https://vertx.io/blog/some-rest-with-vert-x/) . 
 
+## Superheroescollection
 
-
-= Superheroescollection
-
-image:https://img.shields.io/badge/vert.x-3.5.3-purple.svg[link="https://vertx.io"]
+![alt text](https://img.shields.io/badge/vert.x-3.5.3-purple.svg)
 
 This application was generated using http://start.vertx.io
 
-== Building
+# Building
 
 To launch your tests:
 ```
@@ -27,7 +25,7 @@ To run your application:
 ./mvnw clean exec:java
 ```
 
-== Help
+## Help
 
 * https://vertx.io/docs/[Vert.x Documentation]
 * https://stackoverflow.com/questions/tagged/vert.x?sort=newest&pageSize=15[Vert.x Stack Overflow]
