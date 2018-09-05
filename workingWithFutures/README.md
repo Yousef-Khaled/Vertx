@@ -2,7 +2,7 @@
 
 #####  See [Vertx doc](https://vertx.io/docs/vertx-core/java/#_async_coordination). 
 
-## Superheroescollection
+## workingWithFutures
 
 ![alt text](https://img.shields.io/badge/vert.x-3.5.3-purple.svg)
 
