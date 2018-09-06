@@ -16,6 +16,20 @@ public class WebClientAndFutures extends AbstractVerticle {
 
     Future<JsonArray> future = Future.future();
 
+
+
+    vertx.createHttpServer().requestHandler(httpServerRequest -> {
+
+      future.setHandler(jsonArrayAsyncResult -> {
+
+        httpServerRequest.response().end(future.result().toString());
+
+      });
+    }).listen(8080, httpServerAsyncResult -> {
+
+    });
+
+
     client
       .get(80, "mysafeinfo.com", "/api/data?list=englishmonarchs&format=json")
       .send(res -> {
@@ -27,12 +41,6 @@ public class WebClientAndFutures extends AbstractVerticle {
       });
 
 
-    future.setHandler(jsonArrayAsyncResult -> {
-      vertx.createHttpServer().requestHandler(httpServerRequest -> {
-        httpServerRequest.response().end(future.result().toString());
-      }).listen(8080, httpServerAsyncResult -> {
 
-      });
-    });
   }
 }
