@@ -1,6 +1,7 @@
 ### This project is very similar to
 
-#####  See [Vertx doc](https://vertx.io/blog/some-rest-with-vert-x/) . 
+#####  See [Vertx doc](https://vertx.io/blog/using-the-asynchronous-sql-client/) and [Vert.x MySQL / PostgreSQL client
+](https://vertx.io/docs/vertx-mysql-postgresql-client/java/) . 
 
 ## Superheroescollection
 
