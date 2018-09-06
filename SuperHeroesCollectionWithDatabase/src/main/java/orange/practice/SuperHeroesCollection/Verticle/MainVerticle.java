@@ -3,23 +3,45 @@ package orange.practice.SuperHeroesCollection.Verticle;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
 import io.vertx.core.json.Json;
-import io.vertx.ext.jdbc.JDBCClient;
+
+import io.vertx.core.json.JsonArray;
+import io.vertx.core.json.JsonObject;
+import io.vertx.ext.asyncsql.AsyncSQLClient;
+import io.vertx.ext.asyncsql.PostgreSQLClient;
+import io.vertx.ext.sql.SQLConnection;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.ext.web.handler.BodyHandler;
 import orange.practice.SuperHeroesCollection.Model.Hero;
-import orange.practice.SuperHeroesCollection.helpers.NewData;
 
 public class MainVerticle extends AbstractVerticle {
 
-  private NewData data;
-
-
+  private AsyncSQLClient jdbcClient;
+  private Future<SQLConnection> future;
 
   @Override
   public void start(Future<Void> startFuture) throws Exception {
-    data = new NewData();
-    data.SomeData();
+
+
+    Class.forName("org.postgresql.Driver");
+
+    jdbcClient = PostgreSQLClient.createNonShared(vertx, new JsonObject()
+      .put("url", "jdbc::postgresql://localhost:5432/")
+      .put("username", "postgres")
+      .put("password", "root")
+      .put("driver_class", "org.postgresql.Driver")
+      .put("database", "superHero"));
+
+
+    future = Future.future();
+
+    jdbcClient.getConnection(sqlConnectionAsyncResult -> {
+      if (sqlConnectionAsyncResult.succeeded()) {
+        future.complete(sqlConnectionAsyncResult.result());
+      } else {
+        future.fail("failed");
+      }
+    });
 
 
     Router router = Router.router(vertx);
@@ -28,11 +50,7 @@ public class MainVerticle extends AbstractVerticle {
     router.route().handler(BodyHandler.create());
 
     router.get("/heroes").handler(this::getAll);
-    router.get("/heroes/:id").handler(this::getOne);
     router.post("/heroes").handler(this::addOne);
-    router.delete("/heroes/:id").handler(this::delete);
-    router.put("/heroes/:id").handler(this::update);
-
 
     vertx.createHttpServer().requestHandler(router::accept).listen(config().getInteger("http.port", 8080), httpServerAsyncResult -> {
       if (httpServerAsyncResult.succeeded()) {
@@ -45,42 +63,28 @@ public class MainVerticle extends AbstractVerticle {
   }
 
   private void getAll(RoutingContext routingContext) {
-    routingContext.response()
-      .putHeader("content-type", "application/json; charset=utf-8")
-      .end(Json.encodePrettily(data.getHeroes()));
+    future.setHandler(sqlConnectionAsyncResult -> {
+      sqlConnectionAsyncResult.result().query("SELECT * FROM data", resultSetAsyncResult -> {
+        routingContext.response().end(new JsonArray(resultSetAsyncResult.result().getRows()).toString());
+      });
+    });
+
+
   }
 
   private void addOne(RoutingContext routingContext) {
     final Hero hero = Json.decodeValue(routingContext.getBodyAsString(),
       Hero.class);
     hero.setId(Hero.getCOUNTER().get());
-    data.getHeroes().put(hero.getId(), hero);
-    routingContext.response()
-      .putHeader("content-type", "application/json; charset=utf-8")
-      .end(Json.encodePrettily(hero));
+    String q = "INSERT INTO data VALUES (" + hero.getId() +" , '" + hero.getName() + "')";
+    future.setHandler(sqlConnectionAsyncResult -> {
+      sqlConnectionAsyncResult.result().execute(q, resultSetAsyncResult -> {
+        routingContext.response()
+          .putHeader("content-type", "application/json; charset=utf-8")
+          .end("True");
+      });
+    });
+
   }
 
-  private void delete(RoutingContext routingContext) {
-    String id = routingContext.request().getParam("id");
-    data.getHeroes().remove(new Integer(id));
-    routingContext.response().end("True");
-  }
-
-  private void getOne(RoutingContext routingContext) {
-    String id = routingContext.request().getParam("id");
-    routingContext.
-      response().
-      putHeader("content-type", "application/json; charset=utf-8")
-      .end(Json.encodePrettily(data.getHeroes().get(new Integer(id))));
-  }
-
-  private void update(RoutingContext routingContext) {
-    String id = routingContext.request().getParam("id");
-    Hero hero = Json.decodeValue(routingContext.getBodyAsString(), Hero.class);
-    hero.setId(new Integer(id));
-    data.getHeroes().put(new Integer(id), hero);
-    routingContext.response()
-      .putHeader("content-type", "application/json; charset=utf-8")
-      .end(Json.encodePrettily(hero));
-  }
 }
