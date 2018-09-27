@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3116b865-4d88-431c-ad01-5b50cc7003ef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../SuperHeroesCollectionWithDatabase/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperHeroesCollectionWithDatabase/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <ignored path="$PROJECT_DIR$/out/" />
+    <list default="true" id="5ed93476-8607-498d-ad15-1591773d01a3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,32 +10,38 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="237886961">
+    <session id="1104702726">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
-          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="6" />
+          <entry key="class" value="1" />
+          <entry key="java" value="2" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="6" />
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="2" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="741" />
+          <entry key="java" value="483" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="741" />
+          <entry key="JAVA" value="483" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -46,25 +49,33 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/OrderedSetsVerticle.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/vertx/VertxSubscriberRedis/MainVerticle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="69" column="66" selection-start-line="69" selection-start-column="66" selection-end-line="69" selection-end-column="66" />
+            <state relative-caret-position="274">
+              <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#645#839#0" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SetsVerticle.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/vertx/VertxSubscriberRedis/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="11" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -78,16 +89,12 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/java/io/vertx/VertxSubscriberRedis/Main.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/KeysAndHashes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SetsVerticle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/OrderedSetsVerticle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/vertx/VertxSubscriberRedis/MainVerticle.java" />
       </list>
     </option>
   </component>
@@ -99,57 +106,61 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="28" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1942" />
+    <option name="height" value="1042" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="VetxAndRedis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VetxAndRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="VertxSubscriberRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VertxSubscriberRedis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="VetxAndRedis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VetxAndRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="VertxSubscriberRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VertxSubscriberRedis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="VetxAndRedis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VetxAndRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="VertxSubscriberRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VertxSubscriberRedis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="VetxAndRedis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VetxAndRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="VertxSubscriberRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VertxSubscriberRedis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VertxSubscriberRedis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VertxSubscriberRedis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="VertxSubscriberRedis" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537688617095" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Vertx\VetxAndRedis\src\main\java" />
-    </key>
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538037495323" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -163,29 +174,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SetsVerticle">
-    <configuration name="KeysAndHashes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="KeysAndHashes" />
-      <module name="VetxAndRedis" />
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.vertx.VertxSubscriberRedis.Main" />
+      <module name="VertxSubscriberRedis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.vertx.VertxSubscriberRedis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SetsVerticle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SetsVerticle" />
-      <module name="VetxAndRedis" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.KeysAndHashes" />
-      <item itemvalue="Application.SetsVerticle" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SetsVerticle" />
-        <item itemvalue="Application.KeysAndHashes" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -194,11 +199,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3116b865-4d88-431c-ad01-5b50cc7003ef" name="Default Changelist" comment="" />
-      <created>1537686536141</created>
+      <changelist id="5ed93476-8607-498d-ad15-1591773d01a3" name="Default Changelist" comment="" />
+      <created>1538035083500</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1537686536141</updated>
+      <updated>1538035083500</updated>
     </task>
     <servers />
   </component>
@@ -212,13 +217,13 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.42062193" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5662848" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -237,43 +242,35 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/JedisPubSub.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/vertx/VertxSubscriberRedis/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1704">
-          <caret line="151" selection-start-line="151" selection-end-line="151" />
+        <state relative-caret-position="461">
+          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/KeysAndHashes.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/vertx/VertxSubscriberRedis/MainVerticle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="97" column="59" selection-start-line="97" selection-start-column="59" selection-end-line="97" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ListVerticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" selection-start-line="11" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SetsVerticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="11" selection-end-column="36" />
+        <state relative-caret-position="274">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OrderedSetsVerticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="69" column="66" selection-start-line="69" selection-start-column="66" selection-end-line="69" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#645#839#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
           </folding>
         </state>
       </provider>
