@@ -1,0 +1,7 @@
+infra:
+  host: 192.168.99.100
+
+cassandra:
+  keyspace-name: test
+  contact-points: ${infra.host}
+  port: 9042
